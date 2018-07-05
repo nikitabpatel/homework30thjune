@@ -17,8 +17,8 @@ public class BaseTest extends Utils
     driver.manage().window().maximize();
     driver.get("http://demo.nopcommerce.com/"); }
 
-/* @AfterMethod
+@AfterMethod
     public void closebrowser()
-    {driver.quit();}*/
+    {driver.quit();}
 
 }

@@ -34,7 +34,8 @@ public class Testsuite extends BaseTest
     public void VerifyUserShouldBeAbleToCompare2Items() {
         ClickOnElement(By.xpath("//*[@class='button-2 add-to-compare-list-button'][1]"));
         ClickOnElement(By.linkText("product comparison"));
-        ClickOnElement(By.xpath("//img[@alt='nopCommerce demo store']"));
+       driver.navigate().back();
+        // ClickOnElement(By.xpath("//img[@alt='nopCommerce demo store']"));
         // I tried here to use explicity wait but it does not work so i am going back to main page and asking driver to click on virtual gift card compare button.
         ClickOnElement(By.xpath("//*[@class='item-grid']/div[4]/div/div[2]/div[3]/div[2]/input[2]"));
         Assert.assertEquals(GetTextFromElement(By.className("content")),"The product has been added to your product comparison");
